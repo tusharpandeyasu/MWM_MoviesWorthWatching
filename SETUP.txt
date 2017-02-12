@@ -1,0 +1,10 @@
+Setup Instructions:
+1. Create a python virtual environment. Instructions for those can be found here:http://docs.python-guide.org/en/latest/dev/virtualenvs/
+2. Switch to the virtual environment.
+3. In the directory that contains the requirements.txt file, execute the following command through a bash command line:
+pip install -r requirements.txt
+4. Execute the following command 
+ python server.py
+5. A message will be displayed on the screen which says the server has started for example, Sat Dec  3 19:17:40 2016 Server Starts - localhost:9000
+6. Open the browser and visit the page: http://localhost:9000/
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>MWM</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<style>
+		.button {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 2px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+		.linklike {
+			background:none!important;
+			border:none;
+			padding:0!important;
+			font: inherit;
+			/*border is optional*/
+			border-bottom:1px solid #444;
+			cursor: pointer;
+			color:#77B4F2;
+		}
+		body {
+			background:#303030;
+		}
+		h1 {
+			color: #ffffff;
+			font-family: 'Lato', sans-serif;
+			font-size: 51px;
+			font-weight: 300;
+			line-height: 50px;
+			margin: 0 0 20px;
+		}
+		h3 {
+			color: #000000;
+			font-family: 'Lato', sans-serif;
+		}
+		.bodyStyle {
+			color: #000000;
+			font-family: 'Lato', sans-serif;
+			width:auto;
+			display:inline;
+			word-wrap:break-word;
+		}
+		#demo {
+			color:#ffffff;
+		}
+
+		#dateTimeValue
+		{
+			background: #fe921f;
+			color: #ffffff;
+			display: inline-block;
+			font-family: 'Lato', sans-serif;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 12px;
+			letter-spacing: 1px;
+			margin: 0 0 30px;
+			padding: 10px 15px 8px;
+			text-transform: uppercase;
+		}?
+	</style>
+	<body>
+		<form name="MWM" method="post">
+			<br><br><br>
+
+			<div class="mainContent">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<h1>MWM - Movies Worth Watching</h1>					
+					<br>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+							<h4 class="panel-title">
+								<a  data-parent="#accordion" href="#collapse1">
+								Movie information</a>
+							</h4>
+							</div>
+							<div id="collapse1" class="panel-collapse collapse in">
+								<div class="panel-body">
+								<div class="col-md-4">
+									<div align="left">
+										<a href="/">back to Home</a>
+									</div>
+									<img src="{{mimg}}" width="185" height="270">
+									<br>
+								</div>
+								
+								<div class="col-md-8">
+									<br>
+									<b>Movie Name:</b> {{mname}}<br>
+									<b>Movie Release year:</b> {{myear}}<br>
+									<b>Movie Actors:</b> {{mactors}}<br>
+									<b>Movie Director:</b> {{mdir}}<br>
+									<b>Movie Genre:</b> {{mgenre}}<br>
+									<b>Movie Awards:</b> {{mawards}}<br>
+									<b>Movie Rating:</b> {{mrating}}<br>
+									<b>Movie Length:</b> {{mlength}}<br>
+									<b>Release Date:</b> {{mdate}}<br>
+									<b>Country:</b> {{mcountry}}<br>
+									<b>Language:</b> {{mlanguage}}<br><br>
+									<b>Director also known for:</b> {{dmovies}}<br>
+								</div>
+								<div class="col-md-12">
+									<br>
+									<b>Critic Name:</b> {{cname}}<br>
+									<b>Critique:</b> {{creview}}<br>
+								</div>
+								
+								<div class="col-md-12">
+									<h3> Social Media Buzz: Tweets </h3>
+									<table border = "1">
+										{{tweets}}
+									</table>
+								</div>
+								
+								</div>
+							</div>
+						</div>
+						<button type="button" class="linklike pull-right" data-toggle="collapse" data-target="#demo">About the project</button>
+						<div id="demo" class="collapse pull-right">
+							<i>This project lists the movies worth watching for the acting chops of the cast.
+							Additional information like directors' other work, twitter buzz, etc can also be seen.</i>
+						</div>
+
+				</div>
+				<div class="col-md-3"></div>
+
+			</div>
+		</form>
+	</body>
+</html>
